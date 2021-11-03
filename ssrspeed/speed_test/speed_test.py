@@ -157,8 +157,8 @@ class SpeedTest(object):
 				sum = 0
 				global ntype
 				r1 = requests.get("https://www.netflix.com/title/70242311", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20)
 				if (r1.status_code == 200):
 					sum += 1
@@ -171,8 +171,8 @@ class SpeedTest(object):
 					logger.info("Netflix IP : " + netflix_ip)
 
 				r2 = requests.get("https://www.netflix.com/title/70143836", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20)
 				if (r2.status_code == 200):
 					sum += 1
@@ -201,8 +201,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global htype
 				r = requests.get("https://www.hbomax.com/", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20, allow_redirects=False)
 
 				if (r.status_code == 200):
@@ -220,8 +220,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global dtype
 				r = requests.get("https://www.disneyplus.com/", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20, allow_redirects=False)
 
 				if (r.status_code == 200):
@@ -239,8 +239,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global ytype
 				r = requests.get("https://music.youtube.com/", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20, allow_redirects=False)
 
 				if (r.status_code == 200):
@@ -258,8 +258,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global ttype
 				r = requests.get("https://www.mytvsuper.com/iptest.php", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20, allow_redirects=False)
 
 				if (r.text.count("HK") > 0):
@@ -277,8 +277,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global atype
 				r = requests.get("https://api.abema.io/v1/ip/check?device=android", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, timeout=20, allow_redirects=False)
 
 				if (r.text.count("Country") > 0):
@@ -296,8 +296,8 @@ class SpeedTest(object):
 					"User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36"}
 				global btype
 				r = requests.get("https://ani.gamer.com.tw/ajax/token.php?adID=89422&sn=14667", proxies={
-					"http": "socks5h://127.0.0.1:%d" % LOCAL_PORT,
-					"https": "socks5h://127.0.0.1:%d" % LOCAL_PORT
+					"http": "socks5://127.0.0.1:%d" % LOCAL_PORT,
+					"https": "socks5://127.0.0.1:%d" % LOCAL_PORT
 				}, headers=headers, timeout=20, allow_redirects=False)
 
 				if (r.text.count("animeSn") > 0):
