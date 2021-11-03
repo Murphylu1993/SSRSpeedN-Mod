@@ -26,9 +26,9 @@
 	"stream": true,
 	"hbo": true,
 	"disney": true,
-	"youtube": true,
-	"abema": true,
-	"bahamut": true,
+	"youtube": false,
+	"abema": false,
+	"bahamut": false,
 	"tvb": true,
 	"web": {
 		"listen": "127.0.0.1",
