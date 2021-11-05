@@ -185,7 +185,7 @@ class SpeedTest(object):
 					logger.info("Netflix test result: 仅自制剧.")
 					ntype = "仅自制剧"
 				elif (outboundIP == netflix_ip):
-					logger.info("Netflix test result: 原生解锁.")
+					logger.info("Netflix test result: 原生解锁.: "+netflix_ip)
 					ntype = "原生解锁"
 				else:
 					logger.info("Netflix test result: DNS解锁.")
