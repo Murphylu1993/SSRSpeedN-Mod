@@ -33,7 +33,7 @@ class Shadowsocks(BaseClient):
 					self._process = subprocess.Popen(["ss-local", "-u","-v","-c","%s/config.json" % os.getcwd()])
 				else:
 					self._process = subprocess.Popen(["ss-local", "-u","-c","%s/config.json" % os.getcwd()],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
-				logger.info("Starting Shadowsocks-libev with server %s:%d" % (config["server"],config["server_port"]))
+				logger.info("Starting Shadowsocks-libev with server %s:%d, password: %s ,method %s" % (config["server"],config["server_port"],config["password"],config["method"]))
 			else:
 				logger.critical("Your system does not supported.Please contact developer.")
 				sys.exit(1)
