@@ -225,8 +225,10 @@ class SpeedTest(object):
 				}, timeout=20, allow_redirects=False)
 
 				if (r.status_code == 200):
+					logger.info("disneyplus test result: 解锁.")
 					dtype = True
 				else:
+					logger.info("disneyplus test result: 未解.")
 					dtype = False
 
 			except Exception as e:
